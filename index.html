@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Amrit'sWebsiteForDiabetesPrediction</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    /* in footer Set black background color, white text and some padding */
+    footer {
+     position: fixed;
+            
+            bottom: 0;
+            width: 100%;
+            color: white;
+             padding: 15px;
+            /* Height of the footer*/
+            height: 40px;
+            background-color: #000;   /* made chnages 555 to 000
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+/*     to make the box transparent  */
+    .trans{
+              width: 1200px;
+              background-color: #ffffff99;
+              box-shadow: 0 0 9px 0 rgba(0,0,0,0.3);
+              margin: 100px auto;
+              }
+    
+/* link */
+    a {
+  
+  color: white;
+  text-align: center;}
+    
+/* background image  */
+     body {
+  
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+    
+    
+}
+
+  </style>
+</head>
+    
+    
+<body background="https://img.freepik.com/free-photo/hand-holding-blood-glucose-meter-measuring-blood-sugar-background-is-stethoscope-chart-file_1387-941.jpg?size=626&ext=jpg&uid=R102798983&ga=GA1.2.1912402087.1684062972&semt=ais">
+  
+<div>
+<div class="container">
+<div class="panel-group">
+    <div class="panel panel-info trans">
+      <div class="panel-heading">
+      <div class="panel-title" align="center"><strong> DIABETES PREDICTION </strong></div>
+      </div>
+        <div class="panel-body">
+<hr>
+<center><img src="https://img.freepik.com/free-photo/multi-ethnic-group-diverse-people-holding-letters-that-form-diabetes_53876-167087.jpg?size=626&ext=jpg&uid=R102798983&ga=GA1.2.1912402087.1684062972&semt=ais" alt="Heart Attack Prediction" width="1000" height="200" ></center>
+ 
+
+           
+<form action="/diabetess" method="POST">
+
+  <table class="table table-striped trans" align="center">
+    
+    <div class="row">
+    <tr>
+       <div class="col-sm-6">
+         <td><label for="AGE" class="form-label">Age of the Patient :</label></td></div>
+        <div class="col-sm-6">
+          <td><input type="text" name="AGE" placeholder="Enter Patient's Age" required></td></div>
+    </tr>
+        # AGE,BLOODPRESSURE,PREGNANCIES,GLUCOSE,SKINTHICKNESS,INSULIN,BMI,DIABETESPEDIGREEFUNCTION 
+      <tr>
+        <div class="col-sm-6">
+          <td><label for="BLOODPRESSURE" class="form-label">Diastolic blood pressure (mm Hg) (in mm Hg) :</label></td></div>
+        <div class="col-sm-6">
+          <td><input type="text" name="BLOOD" placeholder="Enter Blood Pressure" required></td></div>
+    </tr> 
+      
+      <tr>
+        <div class="col-sm-6">
+          <td><label for="GLUCOSE" class="form-label">Plasma glucose concentration in a 2-hour oral glucose tolerance test :</label></td></div>
+        <div class="col-sm-6">
+          <td><input type="text" name="GLUCOSE" placeholder="Enter Glucose value" required></td></div>
+    </tr>
+      
+      <tr>
+        <div class="col-sm-6">
+          <td><label for="PREGNANCIES" class="form-label">The number of times the patient has been pregnant:</label></td></div>
+        <div class="col-sm-6">
+          <td><input type="text" name="PREGNANCIES" placeholder="Enter Max Heart Rate" required></td></div>
+    </tr>  
+
+    <tr>
+        <div class="col-sm-6">
+          <td><label for="BMI" class="form-label">Body mass index (weight in kg / (height in m)^2) :</label></td></div>
+        <div class="col-sm-6">
+          <td><input type="BMI" name="BMI" placeholder="Enter the BMI value" required></td></div>
+       <tr>
+        <div class="col-sm-6">
+          <td><label for="INSULIN" class="form-label">The 2-hour serum insulin level (mu U/ml) :</label></td></div>
+        <div class="col-sm-6">
+          <td><input type="text" name="INSULIN" placeholder="Enter Insulin value" required></td></div>
+    </tr>
+      
+       <tr>
+        <div class="col-sm-6">
+          <td><label for="SKINTHICKNESS" class="form-label">The thickness of the skinfold at the triceps (mm) :</label></td></div>
+        <div class="col-sm-6">
+          <td><input type="text" name="SKINTHICKNESS" placeholder="Enter Glucose value" required></td></div>
+    </tr>
+      
+       <tr>
+        <div class="col-sm-6">
+          <td><label for="DIABETES_PEDIGREE_FUNCTION" class="form-label">The diabetes pedigree function, which provides information about 
+# the genetic influence of diabetes among relatives :</label></td></div>
+        <div class="col-sm-6">
+          <td><input type="text" name="DIABETES_PEDIGREE_FUNCTION" placeholder="Enter Diabetes Pedigree value" required></td></div>
+    </tr>
+   
+    </tr>  
+   
+    </div>
+  </table>
+  </form>
+</div>
+  
+          </div>
+     </div>
+
+   <div class="panel panel-success trans">
+     <div class="panel-heading"> Your Report is: </div>
+     <div class="panel-body" align="center"> {{data}} </div>
+     <center>
+     {% if data==0 %}
+        <h2>
+          Less chance of Heart Attack,<br> Stay Happy.
+       </h2>
+        <img src="https://cdn.glitch.global/8599b2d2-58ab-4d42-98f5-97fa4c6bad04/healthyheart.jpg?v=1681566084800" alt="Healthy Heart" width="200" height="200">
+     {% elif data==1 %}
+        <h2>
+          More chance of Heart Attack,<br> Please meet Doctor.
+       </h2>
+        <img src="https://cdn.glitch.global/8599b2d2-58ab-4d42-98f5-97fa4c6bad04/Heart-attack.webp?v=1681566080784" alt="IRIS VERSICOLOR" width="200" height="200">
+     
+     {% endif %}
+     </center>
+   </div>
+  
+  
+  
+  </div>
+
+<hr>
+  
+  
+  </div>
+  
+  <hr>
+<footer class="container-fluid text-center">
+  <p>@Amrit Kaur</p>
+</footer>
+
+  </body>
+
+</html>
