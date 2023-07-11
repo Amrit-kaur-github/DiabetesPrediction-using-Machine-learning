@@ -1,2 +1,1 @@
-# HeartDieseasePrediction-using-Machine-learning
-Builded a predictive system using a dataset sourced from Kaggle. The data is tested on the same dataset to determine the likelihood of a person having heart disease based on a variety of input factors, including age, sex, chest pain type, blood pressure, cholesterol, fasting blood sugar over 120, EKG results, maximum heart rate, exercise-induced angina, ST depression, slope of ST, number of vessels, and Thallium results. The Systems output provides a prediction of the person's heart health status, indicating whether they are healthy or suffering from heart disease.
+.
